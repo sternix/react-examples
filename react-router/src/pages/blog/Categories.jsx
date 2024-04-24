@@ -2,7 +2,7 @@
 function Categories() {
   return (
     <div>
-      <h3>Categories</h3>
+      <h3>Blog Kategorileri</h3>
     </div>
   )
 }

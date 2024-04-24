@@ -2,7 +2,7 @@
 function Blog() {
   return (
     <div>
-      <h3>Blog Sayfası</h3>
+      <h3>Blog Index Sayfası</h3>
     </div>
   )
 }
