@@ -1,4 +1,4 @@
-/* NavLink kullandığımızda ektif olan linke .active class'ı veriliyor */
+/* NavLink kullandığımızda aktif olan linke .active class'ı veriliyor */
 .active {
     background-color: cyan;
 }
