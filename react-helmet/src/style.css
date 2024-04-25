@@ -1,0 +1,9 @@
+/* NavLink kullandığımızda ektif olan linke .active class'ı veriliyor */
+.active {
+    background-color: cyan;
+}
+
+.link-item {
+    margin-right: 10px;
+    text-decoration: none;
+}
