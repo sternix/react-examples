@@ -7,8 +7,6 @@ function Yup() {
   const [email, setEmail] = useState('')
   const [error, setError] = useState(null)
 
-  const hasError = error != null
-
   const handleSubmit = (e) => {
     e.preventDefault()
     const data = {
@@ -23,8 +21,6 @@ function Yup() {
         console.log(user)
       })
       .catch(e => setError(e))
-
-    console.log(`Adı: ${name}, Soyadı: ${email}, Kabul: ${kabul}`)
   }
 
   return (
