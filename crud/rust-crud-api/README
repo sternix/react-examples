@@ -1,0 +1,15 @@
+sample .env file
+
+DB_HOST = 127.0.0.1
+DB_NAME = user
+DB_PORT = 5432
+DB_USER = postges
+DB_PASSWORD = secret
+DB_POOL_SIZE = 50
+
+CREATE TABLE users (
+	id int generated always as identity primary key,
+	name varchar(255),
+	email varchar(255),
+	phone varchar(50)
+);
