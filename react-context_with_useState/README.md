@@ -3,7 +3,7 @@ https://www.youtube.com/watch?v=KY6al2AiW_Q&list=PLfAfrKyDRWrGXWpnJdyC4yXIW6v-Pc
 
 1) Create tour context
 
-const AppContext = createContext()
+    const AppContext = createContext()
 
 2) Wrap Provider component:
 <AppContext.Provider>
@@ -15,6 +15,7 @@ const AppContext = createContext()
 
 4) Get data with useContext
 
+```js
 function Title() {
     // burada value olarak ne verdiysek onu alıyoruz
     // object verirsek destruct edebiliriz
