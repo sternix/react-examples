@@ -4,7 +4,7 @@ const schema = Yup.object({
     name: Yup.string()
         .required('Adı alanı zorunludur')
         .min(2, 'Minimum 2 karakter')
-        .max(255, 'Maksimum 255 karakter girebilirisiz'),
+        .max(255, 'Maksimum 255 karakter girebilirsiniz'),
 
     email: Yup.string()
         .required('Email alanı zorunludur')
