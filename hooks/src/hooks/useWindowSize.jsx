@@ -1,23 +1,28 @@
-import React from "react";
+import { useEffect, useState } from "react";
+
+// https://www.30secondsofcode.org/react/s/use-window-size/
 
 export default function useWindowSize() {
-    const [windowSize, setWindowSize] = React.useState({
+    const [windowSize, setWindowSize] = useState({
         width: undefined,
         height: undefined,
-    });
+    })
 
-    React.useEffect(() => {
-        const handleResize = () =>
-            setWindowSize({ width: window.innerWidth, height: window.innerHeight });
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowSize({
+                width: window.innerWidth,
+                height: window.innerHeight
+            })
+        }
 
-        window.addEventListener('resize', handleResize);
-
-        handleResize();
+        window.addEventListener('resize', handleResize)
+        handleResize()
 
         return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
+            window.removeEventListener('resize', handleResize)
+        }
+    }, [])
 
-    return windowSize;
-};
+    return windowSize
+}

@@ -1,19 +1,21 @@
-import React from "react";
+import { useRef, useEffect } from "react";
+
+// https://www.30secondsofcode.org/react/s/use-event-listener/
 
 export default function useEventListener(type, handler, el = window) {
-    const savedHandler = React.useRef();
+    const savedHandler = useRef()
 
-    React.useEffect(() => {
-        savedHandler.current = handler;
-    }, [handler]);
+    useEffect(() => {
+        savedHandler.current = handler
+    }, [handler])
 
-    React.useEffect(() => {
-        const listener = e => savedHandler.current(e);
+    useEffect(() => {
+        const listener = e => savedHandler.current(e)
 
-        el.addEventListener(type, listener);
+        el.addEventListener(type, listener)
 
         return () => {
-            el.removeEventListener(type, listener);
-        };
-    }, [type, el]);
+            el.removeEventListener(type, listener)
+        }
+    }, [type, el])
 };
