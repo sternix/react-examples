@@ -23,6 +23,7 @@ import Timeout from "./pages/Timeout";
 import Interval from "./pages/Interval";
 import Previous from "./pages/Previous";
 import SearchParam from "./pages/SearchParam";
+import Fetch from "./pages/Fetch";
 
 function App() {
     return (
@@ -52,6 +53,7 @@ function App() {
                     <Route path="use-interval" element={<Interval />} />
                     <Route path="use-previous" element={<Previous />} />
                     <Route path="use-search-param" element={<SearchParam />} />
+                    <Route path="use-fetch" element={<Fetch />} />
                 </Route>
             </Routes>
         </BrowserRouter>

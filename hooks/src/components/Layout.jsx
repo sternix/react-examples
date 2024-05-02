@@ -30,6 +30,8 @@ function Layout() {
                 <NavLink to="/use-interval">useInterval</NavLink>
                 <NavLink to="/use-previous">usePrevious</NavLink>
                 <NavLink to="/use-search-param">useSearchParam</NavLink>
+                <br />
+                <NavLink to="/use-fetch">useFetch</NavLink>
             </nav>
             <Outlet />
         </>)
