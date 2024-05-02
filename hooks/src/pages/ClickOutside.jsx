@@ -1,8 +1,8 @@
-import React from 'react'
+import { useRef } from 'react'
 import useClickOutside from '../hooks/useClickOutside';
 
 function ClickBox({ onClickOutside }) {
-    const clickRef = React.useRef()
+    const clickRef = useRef()
     useClickOutside(clickRef, onClickOutside)
     return (
         <div

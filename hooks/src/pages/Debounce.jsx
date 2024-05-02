@@ -2,8 +2,8 @@ import { useState } from "react";
 import useDebounce from "../hooks/useDebounce";
 
 function Debounce() {
-    const [value, setValue] = useState(0);
-    const lastValue = useDebounce(value);
+    const [value, setValue] = useState(0)
+    const lastValue = useDebounce(value)
 
     return (
         <div>

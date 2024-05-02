@@ -1,8 +1,8 @@
-import React from 'react'
+import { useRef } from 'react'
 import useClickInside from '../hooks/useClickInside';
 
 function ClickBox({ onClickInside }) {
-    const clickRef = React.useRef()
+    const clickRef = useRef()
     useClickInside(clickRef, onClickInside)
     return (
         <div

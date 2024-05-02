@@ -1,21 +1,21 @@
-import React from 'react'
+import { useCallback, useState } from 'react'
 import useEventListener from '../hooks/useEventListener';
 
 function EventListener() {
-    const [coords, setCoords] = React.useState({ x: 0, y: 0 });
+    const [coords, setCoords] = useState({ x: 0, y: 0 })
 
-    const updateCoords = React.useCallback(
+    const updateCoords = useCallback(
         ({ clientX, clientY }) => {
-            setCoords({ x: clientX, y: clientY });
+            setCoords({ x: clientX, y: clientY })
         },
         [setCoords]
     );
 
-    useEventListener('mousemove', updateCoords);
+    useEventListener('mousemove', updateCoords)
 
     return (
         <p>Mouse coordinates: {coords.x}, {coords.y}</p>
-    );
+    )
 }
 
 export default EventListener

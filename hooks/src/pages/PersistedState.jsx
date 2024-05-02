@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState } from 'react'
 import usePersistedState from '../hooks/usePersistedState';
 
 
@@ -13,7 +13,7 @@ function MyComponent({ name }) {
 }
 
 function PersistedState() {
-    const [name, setName] = React.useState('my-value');
+    const [name, setName] = useState('my-value');
     return (
         <>
             <input
