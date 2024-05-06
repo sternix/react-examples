@@ -1,10 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import Menu from "./components/Menu";
+import { extractOffSetFromEvent } from "./utils";
 import "./style.css";
 
 function App() {
     const canvasRef = useRef(null);
     const ctxRef = useRef(null);
+    const scalingFactor = 1
     const [isDrawing, setIsDrawing] = useState(false);
     const [lineWidth, setLineWidth] = useState(5);
     const [lineColor, setLineColor] = useState('#000000');
@@ -25,10 +27,16 @@ function App() {
 
     // Function for starting the drawing 
     const startDrawing = (e) => {
+        const { offsetX, offsetY } = extractOffSetFromEvent(
+            e,
+            scalingFactor,
+            canvasRef
+        );
+
         ctxRef.current.beginPath();
         ctxRef.current.moveTo(
-            e.nativeEvent.offsetX,
-            e.nativeEvent.offsetY
+            offsetX,
+            offsetY
         );
         setIsDrawing(true);
     };
@@ -43,9 +51,16 @@ function App() {
         if (!isDrawing) {
             return;
         }
+
+        const { offsetX, offsetY } = extractOffSetFromEvent(
+            e,
+            scalingFactor,
+            canvasRef
+        );
+
         ctxRef.current.lineTo(
-            e.nativeEvent.offsetX,
-            e.nativeEvent.offsetY
+            offsetX,
+            offsetY
         );
 
         ctxRef.current.stroke();
@@ -67,6 +82,9 @@ function App() {
                     onMouseDown={startDrawing}
                     onMouseUp={endDrawing}
                     onMouseMove={draw}
+                    onTouchStart={startDrawing}
+                    onTouchEnd={endDrawing}
+                    onTouchMove={draw}
                     ref={canvasRef}
                     width={`1280px`}
                     height={`720px`}

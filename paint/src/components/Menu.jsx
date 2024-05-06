@@ -1,6 +1,6 @@
 import "../style.css";
 
-const Menu = ({ setLineColor, setLineWidth, setLineOpacity, lineColor, lineWidth, lineOpacity }) => {
+function Menu ({ setLineColor, setLineWidth, setLineOpacity, lineColor, lineWidth, lineOpacity }) {
     return (
         <div className="Menu">
             <label>Brush Color </label>
@@ -33,6 +33,6 @@ const Menu = ({ setLineColor, setLineWidth, setLineOpacity, lineColor, lineWidth
             />
         </div>
     );
-};
+}
 
 export default Menu;
