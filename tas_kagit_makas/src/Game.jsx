@@ -28,8 +28,8 @@ function Game() {
     }
 
     const decision = (playerChoice) => {
-        const choices = [TAS, KAGIT, MAKAS];
-        const compChoice = choices[Math.floor(Math.random() * choices.length)];
+        const choices = [TAS, KAGIT, MAKAS]
+        const compChoice = choices[Math.floor(Math.random() * choices.length)]
         const val = logic(playerChoice, compChoice)
         if (val === 1) {
             setPlayerVal(playerChoice)
