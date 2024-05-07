@@ -1,5 +1,5 @@
 önceden yazılmış bir uygulamayı 
-fonksyion componenti olarak yazdım,
+fonksiyon componenti olarak yazdım,
 veritabanı olmadığından çalışmıyor 
 örnek olması için ekliyorum
 
