@@ -1,0 +1,7 @@
+index.js:247 Warning: Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
+
+  const openingCeil = (index) => {
+    if (['died', 'won'].includes(state.status))
+      return;
+    dispatch({ type: 'OPENING_CEIL', payload: index }); <--
+  }
